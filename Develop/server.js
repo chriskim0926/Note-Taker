@@ -4,7 +4,7 @@
 // ==============================================================================
 
 var express = require("express");
-var bodyParser = require("body-parser")
+// var bodyParser = require("body-parser")
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
     res.send('Hello World')
   })
   
-  app.listen(3000)
+  app.listen(8080)
 
 // // Sets an initial port. We"ll use this later in our listener
 var PORT = process.env.PORT || 8080;
