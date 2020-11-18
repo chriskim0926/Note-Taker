@@ -9,6 +9,7 @@ const app = express();
 
 // Last step - add route
 
+require('./routing/apiRouters.js')(app);
 require('./routing/htmlRouting.js')(app);
 
 app.listen(PORT, function (){
