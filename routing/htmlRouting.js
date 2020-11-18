@@ -1,16 +1,12 @@
-const path = require("path")
+var path = require("path");
 
-module.exports = function (app) {
-    app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname + '/../public/index.html'));
-  }); 
-    app.get('/notes', function(req, res){
-        res.sendFile(path.join(__dirname + '/../public/notes.html'));
-  });   
-  
-    app.use(function(req, res){
-        res.sendFile(path.join(__dirname + '/../public/index.html'));
-  });     
+module.exports = function(app){
 
+  app.get("/notes", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/notes.html"))
+  })
+
+  app.get("*", (req, res)=>{
+    res.sendFile(path.join(__dirname, "../public/index.html"))
+  })
 }
-
