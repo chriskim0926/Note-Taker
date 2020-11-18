@@ -4,6 +4,9 @@
 // ==============================================================================
 
 var express = require("express");
+const http = require("http");
+
+const server = http.createServer();
 // var bodyParser = require("body-parser")
 
 // ==============================================================================
@@ -44,3 +47,6 @@ app.use(express.json());
 app.listen(PORT, function() {
   console.log("Server listening on: http://localhost:" + PORT);
 });
+server.listen(PORT, function() {
+    console.log("Server listening on: http://localhost:" + PORT);
+  });
