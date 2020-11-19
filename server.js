@@ -3,7 +3,6 @@ const express = require("express");
 // need path for filename paths
 const path = require("path");
 // need fs to read and write to files
-const fs = require("fs");
 
 
 // creating an "express" server
@@ -13,7 +12,6 @@ const PORT = process.env.PORT || 8080;
 
 //  Initialize notesData
 
-let notesData = [];
 
 // Set up body parsing, static, and route middleware
 app.use(express.json());

@@ -66,8 +66,8 @@
     }
     runNoteQuery()
     
-    $("#addBtn").on("click", function(event){
-      event.preventDefault();
+    $("#addBtn").on("click", function(){
+    
 
       const addNote = {
         title: $('#titlearea').val().trim(),
@@ -79,16 +79,17 @@
 
     const currentURL = window.location.origin;
     $.post(currentURL + "/api/notes", addNote)
-    .then(function(data){
-      console.log("addning note",data);
+    .then(function(){
+      
+      console.log("addning note");
       alert("adding note....");
+      
     })
 
 
      $('#titlearea').val("")
      $('#textarea').val("")
 
-     runNoteQuery()
     })
   
     
