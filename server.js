@@ -16,6 +16,7 @@ const PORT = process.env.PORT || 8080;
 // Set up body parsing, static, and route middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/public', express.static(path.join(__dirname, "public")));
 // app.use(express.static(path.join(__dirname, "/public")));
 
 
@@ -26,3 +27,4 @@ require("./routing/htmlRouting.js")(app)
 app.listen(PORT, function() {
   console.log("Server listening on: http://localhost:" + PORT);
 });
+
